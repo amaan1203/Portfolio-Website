@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper,About-me{
+    background-image: url("preview.jpg");
+    width: 100vw;
+    height:100vh;
+}
+.nav{
+    font-family:"sans-serif","Be Vietnam Pro";
+}
+.hero-section-right {
+    box-shadow: 10px 10px 10px rgb(128,128,128);
+    animation: scaleImage 5s linear infinite;
+
+}
+
+@keyframes scaleImage {
+
+    0%{
+        filter:grayscale(0);
+        transform:scale(1);
+        
+    }
+
+    50%{
+        transform:scale(1.1);
+        filter:grayscale(1);
+        box-shadow: 3px 3px 10px black;
+    }
+
+    100%{
+        transform:scale(1);
+        filter:grayscale(0);
+    }
+    
+  }
+  .dotsImage2{
+    right:1rem;
+  }
+  .dotsImage1,.dotsImage2{
+
+    animation-name:dotsAnimation;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite ;
+
+  }
+  @keyframes dotsAnimation {
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+  }
+  .cube{
+    animation-name: cubeRotate;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    right:30rem;
+  }
+  @keyframes cubeRotate {
+    0%{
+        transform: rotateY(0deg) translateY(0px);
+    }
+    50%{
+        transform:  rotateY(180deg) translateY(-12px);
+    }
+    100%{
+        transform:  rotateY(360deg) translateY(0px);
+    }
+  }
+  .plus{
+    animation:shakeEffectPlus 5s ease-in infinite;
+    right:15rem;
+    top:2rem;
+  }
+
+  @keyframes shakeEffectPlus {
+    50%{
+        transform:translateY(5px);
+        tranform:translatex(5px);
+    }
+  }
+.About-me{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+.About-me-heading{
+    width:100vw;
+    text-align: center;
+}
+ 
+.blob-style{
+  position: absolute;
+    top:20%;
+    left:20%;
+    transform:translate(-70%,-70%);
+    animation: blobAnimate 30s linear infinite;
+    z-index:-5;
+}
+@keyframes blobAnimate {
+  50%{
+    left:56%;
+    top:60%;
+  }
+  
+}
+
